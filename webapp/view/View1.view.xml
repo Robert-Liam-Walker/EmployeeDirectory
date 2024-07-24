@@ -1,0 +1,62 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox id="vboxContainer">
+                <SearchField id="searchField" placeholder="Search by name..." liveChange="onSearch"/>
+                <Select id="departmentSelect" change="onDepartmentChange">
+                    <items>
+                        <core:Item id="itemAll" key="" text="All Departments" />
+                        <core:Item id="itemHR" key="HR" text="HR" />
+                        <core:Item id="itemIT" key="IT" text="IT" />
+                        <core:Item id="itemFinance" key="Finance" text="Finance" />
+                        <core:Item id="itemMarketing" key="Marketing" text="Marketing" />
+                        <core:Item id="itemSales" key="Sales" text="Sales" />
+                        <core:Item id="itemCustomerService" key="Customer Service" text="Customer Service" />
+                        <core:Item id="itemOperations" key="Operations" text="Operations" />
+                        <core:Item id="itemLegal" key="Legal" text="Legal" />
+                    </items>
+                </Select>
+                <List id="employeeList" items="{
+                        path: 'employees>/EmployeeCollection',
+                        sorter: {path: 'name'}
+                    }">
+                    <items>
+                        <ObjectListItem
+                            id="employeeListItem"
+                            title="{employees>name}">
+                            <attributes>
+                                <ObjectAttribute id="roleAttribute" title="Role" text="{employees>role}" />
+                                <ObjectAttribute id="emailAttribute" title="Email" text="{employees>email}" />
+                                <ObjectAttribute id="departmentAttribute" title="Department" text="{employees>department}" />
+                                <ObjectAttribute id="idAttribute" title="ID" text="{employees>id}" />
+                            </attributes>
+                            <customData>
+                                <core:CustomData key="employeeId" value="{employees>id}" />
+                            </customData>
+                        </ObjectListItem>
+                    </items>
+                </List>
+            </VBox>
+
+            <!-- Dialog for displaying employee details -->
+            <Dialog id="employeeDetailDialog" title="Employee Details">
+                <content>
+                    <VBox id="dialogContent">
+                        <Text id="dialogName" />
+                        <Text id="dialogId" />
+                        <Text id="dialogDepartment" />
+                        <Text id="dialogRole" />
+                        <Text id="dialogEmail" />
+                    </VBox>
+                </content>
+                <buttons>
+                    <Button id="closeDialogButton" text="Close" press="onCloseDialog" />
+                </buttons>
+            </Dialog>
+        </content>
+    </Page>
+</mvc:View>

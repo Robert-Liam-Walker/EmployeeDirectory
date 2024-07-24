@@ -1,0 +1,19 @@
+<mvc:View controllerName="project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Page id="detailPage" title="Employee Details" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <ObjectHeader
+                id="objectHeader"
+                title="{employees>name}"
+                number="{employees>id}"
+                numberUnit="{employees>department}">
+                <attributes>
+                    <ObjectAttribute id="roleAttributeDetail" title="Role" text="{employees>role}" />
+                    <ObjectAttribute id="emailAttributeDetail" title="Email" text="{employees>email}" />
+                </attributes>
+            </ObjectHeader>
+        </content>
+    </Page>
+</mvc:View>
