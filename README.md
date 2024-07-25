@@ -1,7 +1,24 @@
 # Employee Directory
 
 The **Employee Directory** app is a web-based application designed to help organizations manage and view employee information efficiently. With this application, users can easily search for employees, view their details, and filter employees by department.
+Open your browser and go to `http://localhost:3000` or the URL provided by your development server.
 
+## Images
+![Main](https://i.imgur.com/mpBQMDb.png)
+
+## Contributing
+
+We welcome contributions to improve the application. Please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes with clear messages.
+4. Push your changes to your forked repository.
+5. Create a pull request describing your changes.
+
+## License
+
+This project is licensed under the MIT
 ## Features
 
 - **Search Functionality:** Quickly find employees by name or ID.
@@ -54,8 +71,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any questions or feedback, please contact [Liam Walker](mailto:liam.walker@example.com).
-## Images
-![Main](https://i.imgur.com/mpBQMDb.png)
+
 ## Application Details
 |               |
 | ------------- |
