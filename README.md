@@ -14,14 +14,16 @@ To get started with the Employee Directory app, follow these steps:
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone git@github.com:Robert-Liam-Walker/EmployeeDirectory.git
+```bash
+git clone git@github.com:Robert-Liam-Walker/EmployeeDirectory.git
 ```
+
 2. **Navigate to the Project Directory**
 
 ```bash
 cd EmployeeDirectory
 ```
+
 3. **Install Dependencies**
 
 ```bash
