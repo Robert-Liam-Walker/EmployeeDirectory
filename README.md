@@ -36,7 +36,7 @@ npm start
 ```
 5. **Access the Application** <br />
 Open your browser and go to `http://localhost:3000` or the URL provided by your development server.
-<br />
+
 ## Contributing
 
 We welcome contributions to improve the application. Please follow these guidelines:
