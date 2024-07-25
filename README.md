@@ -16,9 +16,6 @@ We welcome contributions to improve the application. Please follow these guideli
 4. Push your changes to your forked repository.
 5. Create a pull request describing your changes.
 
-## License
-
-This project is licensed under the MIT
 ## Features
 
 - **Search Functionality:** Quickly find employees by name or ID.
@@ -63,10 +60,6 @@ We welcome contributions to improve the application. Please follow these guideli
 3. Commit your changes with clear messages.
 4. Push your changes to your forked repository.
 5. Create a pull request describing your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
