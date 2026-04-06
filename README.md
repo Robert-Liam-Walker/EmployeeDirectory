@@ -1,13 +1,15 @@
 # Employee Directory
 
-Employee Directory is a small SAPUI5 application for browsing a company employee roster, filtering by department, and opening a dedicated detail view for each employee.
+Employee Directory is a SAPUI5 application for browsing a company roster, filtering by department, and opening a dedicated detail page for each employee.
 
 ## Current Features
 
 - Search employees by name, ID, role, or email
 - Filter the directory by department
+- Review top-level summary metrics for headcount, active employees, departments, and locations
 - Browse a sorted employee list with status, location, and manager info
 - Open a routed employee detail page with contact and employment metadata
+- Includes unit tests for controller helpers and OPA coverage for the list-to-detail flow
 - Responsive UI built with SAPUI5/Fiori tooling
 
 ## Getting Started
@@ -50,10 +52,8 @@ npm run start-noflp
 
 - Employee data currently comes from `webapp/model/employees.json`
 - The app uses component-level JSON models so both the list page and detail page share the same source of truth
-
-## Contact
-
-For questions or feedback, contact [Liam Walker](mailto:liam.walker@example.com).
+- `npm run build` has been verified locally
+- Browser-based UI tests are included, but they still need to be exercised in a browser session
 
 ## Application Details
 |               |
@@ -66,7 +66,7 @@ For questions or feedback, contact [Liam Walker](mailto:liam.walker@example.com)
 |**Service Type**<br>None|
 |**Service URL**<br>N/A
 |**Module Name**<br>project1|
-|**Application Title**<br>App Title|
+|**Application Title**<br>Employee Directory|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.126.1|
@@ -74,18 +74,6 @@ For questions or feedback, contact [Liam Walker](mailto:liam.walker@example.com)
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## project1
+## Notes
 
-An SAP Fiori application.
-
-### Starting the generated app
-
--   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply run the following from the generated app root folder:
-
-```
-    npm start
-```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
+This project started from the SAP Fiori freestyle generator and has been adapted into a standalone employee directory sample.

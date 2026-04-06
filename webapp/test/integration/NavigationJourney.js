@@ -3,7 +3,8 @@
 sap.ui.define([
 	"sap/ui/test/opaQunit",
 	"./pages/App",
-	"./pages/View1"
+	"./pages/View1",
+	"./pages/View2"
 ], function (opaTest) {
 	"use strict";
 
@@ -18,6 +19,19 @@ sap.ui.define([
       	Then.onTheViewPage.iShouldSeeThePageView();
 
 		//Cleanup
+		Then.iTeardownMyApp();
+	});
+
+	opaTest("Should open an employee detail page and return to the directory", function (Given, When, Then) {
+		Given.iStartMyApp();
+
+		When.onTheViewPage.iOpenTheFirstEmployee();
+
+		Then.onTheDetailPage.iShouldSeeEmployeeDetails();
+
+		When.onTheDetailPage.iNavigateBackToTheDirectory();
+
+		Then.onTheViewPage.iShouldSeeThePageView();
 		Then.iTeardownMyApp();
 	});
 });

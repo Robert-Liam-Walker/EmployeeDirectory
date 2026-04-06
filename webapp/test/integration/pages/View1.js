@@ -7,7 +7,19 @@ sap.ui.define([
 	Opa5.createPageObjects({
 		onTheViewPage: {
 
-			actions: {},
+			actions: {
+
+				iOpenTheFirstEmployee: function () {
+					return this.waitFor({
+						id: "employeeList",
+						viewName: sViewName,
+						success: function (oList) {
+							oList.getItems()[0].firePress();
+						},
+						errorMessage: "Did not find the employee list"
+					});
+				}
+			},
 
 			assertions: {
 

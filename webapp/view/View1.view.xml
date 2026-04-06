@@ -12,11 +12,30 @@
                     <ObjectStatus text="{view>/resultCount} of {view>/totalCount} employees" state="Information"/>
                 </Toolbar>
 
+                <HBox wrap="Wrap" renderType="Bare" class="directorySummary">
+                    <VBox class="summaryCard sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <Label text="{i18n>summaryTotalEmployees}" />
+                        <ObjectNumber number="{view>/totalCount}" emphasized="false" />
+                    </VBox>
+                    <VBox class="summaryCard sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <Label text="{i18n>summaryActiveEmployees}" />
+                        <ObjectNumber number="{view>/summary/activeCount}" state="Success" emphasized="false" />
+                    </VBox>
+                    <VBox class="summaryCard sapUiTinyMarginEnd sapUiTinyMarginBottom">
+                        <Label text="{i18n>summaryDepartments}" />
+                        <ObjectNumber number="{view>/summary/departmentCount}" emphasized="false" />
+                    </VBox>
+                    <VBox class="summaryCard sapUiTinyMarginBottom">
+                        <Label text="{i18n>summaryLocations}" />
+                        <ObjectNumber number="{view>/summary/locationCount}" emphasized="false" />
+                    </VBox>
+                </HBox>
+
                 <HBox wrap="Wrap" renderType="Bare" class="sapUiSmallMarginTop sapUiSmallMarginBottom directoryFilters">
                     <SearchField
                         id="searchField"
                         width="22rem"
-                        placeholder="Search by name, ID, role, or email"
+                        placeholder="{i18n>searchPlaceholder}"
                         liveChange="onSearch"/>
                     <Select
                         id="departmentSelect"
@@ -34,7 +53,7 @@
                         path: 'employees>/EmployeeCollection',
                         sorter: {path: 'name'}
                     }"
-                    noDataText="No employees match the current search and filter."
+                    noDataText="{i18n>employeeListNoData}"
                     updateFinished="onListUpdateFinished">
                     <items>
                         <ObjectListItem
@@ -46,10 +65,10 @@
                             press="onEmployeePress"
                             intro="{employees>department}">
                             <attributes>
-                                <ObjectAttribute id="roleAttribute" title="Role" text="{employees>role}" />
-                                <ObjectAttribute id="emailAttribute" title="Email" text="{employees>email}" />
-                                <ObjectAttribute id="locationAttribute" title="Location" text="{employees>location}" />
-                                <ObjectAttribute id="managerAttribute" title="Manager" text="{employees>manager}" />
+                                <ObjectAttribute id="roleAttribute" title="{i18n>employeeRoleLabel}" text="{employees>role}" />
+                                <ObjectAttribute id="emailAttribute" title="{i18n>employeeEmailLabel}" text="{employees>email}" />
+                                <ObjectAttribute id="locationAttribute" title="{i18n>employeeLocationLabel}" text="{employees>location}" />
+                                <ObjectAttribute id="managerAttribute" title="{i18n>employeeManagerLabel}" text="{employees>manager}" />
                             </attributes>
                             <firstStatus>
                                 <ObjectStatus text="{employees>status}" state="{= ${employees>status} === 'Active' ? 'Success' : 'Warning' }"/>

@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form"
     displayBlock="true">
-    <Page id="detailPage" title="Employee Details" showNavButton="true" navButtonPress="onNavBack">
+    <Page id="detailPage" title="{i18n>employeeDetailTitle}" showNavButton="true" navButtonPress="onNavBack">
         <content>
             <VBox class="sapUiResponsiveMargin employeeDetailShell" renderType="Bare">
                 <ObjectHeader
@@ -12,9 +12,9 @@
                     number="{employees>id}"
                     numberUnit="{employees>department}">
                     <attributes>
-                        <ObjectAttribute id="roleAttributeDetail" title="Role" text="{employees>role}" />
-                        <ObjectAttribute id="emailAttributeDetail" title="Email" text="{employees>email}" />
-                        <ObjectAttribute id="managerAttributeDetail" title="Manager" text="{employees>manager}" />
+                        <ObjectAttribute id="roleAttributeDetail" title="{i18n>employeeRoleLabel}" text="{employees>role}" />
+                        <ObjectAttribute id="emailAttributeDetail" title="{i18n>employeeEmailLabel}" text="{employees>email}" />
+                        <ObjectAttribute id="managerAttributeDetail" title="{i18n>employeeManagerLabel}" text="{employees>manager}" />
                     </attributes>
                     <statuses>
                         <ObjectStatus text="{employees>status}" state="{= ${employees>status} === 'Active' ? 'Success' : 'Warning' }" />
@@ -32,17 +32,17 @@
                     columnsL="2"
                     columnsM="1"
                     class="sapUiMediumMarginTop">
-                    <Label text="Email" />
+                    <Label text="{i18n>employeeEmailLabel}" />
                     <Link text="{employees>email}" href="{= 'mailto:' + ${employees>email} }" />
-                    <Label text="Phone" />
+                    <Label text="{i18n>employeePhoneLabel}" />
                     <Text text="{employees>phone}" />
-                    <Label text="Department" />
+                    <Label text="{i18n>employeeDepartmentLabel}" />
                     <Text text="{employees>department}" />
-                    <Label text="Location" />
+                    <Label text="{i18n>employeeLocationLabel}" />
                     <Text text="{employees>location}" />
-                    <Label text="Manager" />
+                    <Label text="{i18n>employeeManagerLabel}" />
                     <Text text="{employees>manager}" />
-                    <Label text="Hire Date" />
+                    <Label text="{i18n>employeeHireDateLabel}" />
                     <Text text="{employees>hireDate}" />
                 </form:SimpleForm>
             </VBox>

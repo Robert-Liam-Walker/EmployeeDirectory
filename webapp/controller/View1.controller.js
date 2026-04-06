@@ -11,6 +11,7 @@ sap.ui.define([
         onInit: function () {
             var oEmployeesModel = this.getOwnerComponent().getModel("employees");
             var aEmployees = oEmployeesModel.getProperty("/EmployeeCollection") || [];
+            var oSummary = this._buildSummary(aEmployees);
 
             this.getView().setModel(oEmployeesModel, "employees");
             this.getView().setModel(new JSONModel({
@@ -18,7 +19,8 @@ sap.ui.define([
                 selectedDepartment: "",
                 resultCount: aEmployees.length,
                 totalCount: aEmployees.length,
-                departments: this._buildDepartmentOptions(aEmployees)
+                departments: this._buildDepartmentOptions(aEmployees),
+                summary: oSummary
             }), "view");
         },
 
@@ -41,6 +43,27 @@ sap.ui.define([
                     text: sDepartment
                 };
             }));
+        },
+
+        _buildSummary: function (aEmployees) {
+            var mLocations = {};
+            var iActiveCount = 0;
+
+            aEmployees.forEach(function (oEmployee) {
+                if (oEmployee.status === "Active") {
+                    iActiveCount++;
+                }
+
+                if (oEmployee.location) {
+                    mLocations[oEmployee.location] = true;
+                }
+            });
+
+            return {
+                activeCount: iActiveCount,
+                departmentCount: this._buildDepartmentOptions(aEmployees).length - 1,
+                locationCount: Object.keys(mLocations).length
+            };
         },
 
         _applyFilters: function () {
