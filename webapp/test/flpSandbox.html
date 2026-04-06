@@ -45,8 +45,9 @@
             },
             applications: {
                 "project1-display": {
-                    title: "App Title",
-                    description: "An SAP Fiori application.",
+                    title: "Employee Directory",
+                    description: "Browse, search, and review employee directory information.",
+                    icon: "sap-icon://employee-pane",
                     additionalInformation: "SAPUI5.Component=project1",
                     applicationType: "URL",
                     url: "../"
@@ -59,7 +60,7 @@
     <!-- Bootstrap the UI5 core library. 'data-sap-ui-frameOptions="allow"'' is a NON-SECURE setting for test environments -->
     <script id="sap-ui-bootstrap"
         src="../resources/sap-ui-core.js"
-        data-sap-ui-libs="sap.m,sap.ui.core,sap.f,sap.suite.ui.generic.template,sap.ui.comp,sap.ui.generic.app,sap.ui.table,sap.ushell"
+        data-sap-ui-libs="sap.m,sap.ui.core,sap.f,sap.ushell"
         data-sap-ui-async="true"
         data-sap-ui-preload="async"
         data-sap-ui-theme="sap_horizon"

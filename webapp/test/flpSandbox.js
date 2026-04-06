@@ -39,7 +39,10 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "App Title",
+									"title": "Employee Directory",
+									"subtitle": "People and contact hub",
+									"info": "Browse, search, and review employees",
+									"icon": "sap-icon://employee-pane",
 									"targetURL": "#project1-display"
 								}
 							}]
@@ -54,8 +57,9 @@ sap.ui.define([
 							"project1-display": {
 								"semanticObject": "project1",
 								"action": "display",
-								"description": "An SAP Fiori application.",
-								"title": "App Title",
+								"description": "Browse, search, and review employee directory information.",
+								"icon": "sap-icon://employee-pane",
+								"title": "Employee Directory",
 								"signature": {
 									"parameters": {}
 								},

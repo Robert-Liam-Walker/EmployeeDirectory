@@ -19,12 +19,12 @@
   "sap.ui": {
     "technology": "UI5",
     "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
+      "icon": "sap-icon://employee-pane",
+      "favIcon": "sap-icon://employee-pane",
+      "phone": "sap-icon://employee-pane",
+      "phone@2": "sap-icon://employee-pane",
+      "tablet": "sap-icon://employee-pane",
+      "tablet@2": "sap-icon://employee-pane"
     },
     "deviceTypes": {
       "desktop": true,
