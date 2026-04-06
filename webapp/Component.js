@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
+        "sap/ui/model/json/JSONModel",
         "project1/model/models"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, JSONModel, models) {
         "use strict";
 
         return UIComponent.extend("project1.Component", {
@@ -29,6 +30,12 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                // set the employee directory data at the component level so all
+                // routed pages can bind to the same source of truth.
+                var oEmployeesModel = new JSONModel();
+                oEmployeesModel.loadData(sap.ui.require.toUrl("project1/model/employees.json"), null, false);
+                this.setModel(oEmployeesModel, "employees");
             }
         });
     }

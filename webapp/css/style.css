@@ -1,0 +1,11 @@
+.employeeDirectoryShell {
+    gap: 0.75rem;
+}
+
+.directoryFilters {
+    gap: 0.75rem;
+}
+
+.employeeDetailShell {
+    max-width: 64rem;
+}

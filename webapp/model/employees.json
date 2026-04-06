@@ -1,0 +1,148 @@
+{
+  "EmployeeCollection": [
+    {
+      "id": "EMP001",
+      "name": "John Doe",
+      "department": "HR",
+      "role": "HR Manager",
+      "email": "john.doe@example.com",
+      "phone": "(312) 555-0101",
+      "location": "Chicago, IL",
+      "manager": "Ava Patel",
+      "hireDate": "2019-03-18",
+      "status": "Active"
+    },
+    {
+      "id": "EMP002",
+      "name": "Jane Smith",
+      "department": "IT",
+      "role": "Senior Developer",
+      "email": "jane.smith@example.com",
+      "phone": "(312) 555-0102",
+      "location": "Austin, TX",
+      "manager": "Marcus Chen",
+      "hireDate": "2020-07-06",
+      "status": "Active"
+    },
+    {
+      "id": "EMP003",
+      "name": "Michael Brown",
+      "department": "Finance",
+      "role": "Financial Analyst",
+      "email": "michael.brown@example.com",
+      "phone": "(312) 555-0103",
+      "location": "New York, NY",
+      "manager": "Olivia Brooks",
+      "hireDate": "2021-01-11",
+      "status": "Active"
+    },
+    {
+      "id": "EMP004",
+      "name": "Emily Davis",
+      "department": "Marketing",
+      "role": "Content Strategist",
+      "email": "emily.davis@example.com",
+      "phone": "(312) 555-0104",
+      "location": "Seattle, WA",
+      "manager": "Priya Raman",
+      "hireDate": "2022-05-09",
+      "status": "Active"
+    },
+    {
+      "id": "EMP005",
+      "name": "Chris Wilson",
+      "department": "Sales",
+      "role": "Account Executive",
+      "email": "chris.wilson@example.com",
+      "phone": "(312) 555-0105",
+      "location": "Atlanta, GA",
+      "manager": "Sophia Allen",
+      "hireDate": "2018-11-26",
+      "status": "Active"
+    },
+    {
+      "id": "EMP006",
+      "name": "Jessica Moore",
+      "department": "Customer Service",
+      "role": "Support Lead",
+      "email": "jessica.moore@example.com",
+      "phone": "(312) 555-0106",
+      "location": "Phoenix, AZ",
+      "manager": "Dylan Price",
+      "hireDate": "2021-09-20",
+      "status": "Active"
+    },
+    {
+      "id": "EMP007",
+      "name": "David Taylor",
+      "department": "Operations",
+      "role": "Operations Coordinator",
+      "email": "david.taylor@example.com",
+      "phone": "(312) 555-0107",
+      "location": "Denver, CO",
+      "manager": "Maya Singh",
+      "hireDate": "2017-06-14",
+      "status": "Active"
+    },
+    {
+      "id": "EMP008",
+      "name": "Sarah Martinez",
+      "department": "Legal",
+      "role": "Corporate Counsel",
+      "email": "sarah.martinez@example.com",
+      "phone": "(312) 555-0108",
+      "location": "Boston, MA",
+      "manager": "Nathan Scott",
+      "hireDate": "2019-09-03",
+      "status": "Active"
+    },
+    {
+      "id": "EMP009",
+      "name": "Andrew Lee",
+      "department": "IT",
+      "role": "Systems Administrator",
+      "email": "andrew.lee@example.com",
+      "phone": "(312) 555-0109",
+      "location": "San Jose, CA",
+      "manager": "Marcus Chen",
+      "hireDate": "2016-12-12",
+      "status": "Active"
+    },
+    {
+      "id": "EMP010",
+      "name": "Laura Harris",
+      "department": "Finance",
+      "role": "Accountant",
+      "email": "laura.harris@example.com",
+      "phone": "(312) 555-0110",
+      "location": "Chicago, IL",
+      "manager": "Olivia Brooks",
+      "hireDate": "2023-02-27",
+      "status": "Active"
+    },
+    {
+      "id": "EMP011",
+      "name": "Daniel Walker",
+      "department": "Marketing",
+      "role": "Marketing Manager",
+      "email": "daniel.walker@example.com",
+      "phone": "(312) 555-0111",
+      "location": "Los Angeles, CA",
+      "manager": "Priya Raman",
+      "hireDate": "2020-04-13",
+      "status": "On Leave"
+    },
+    {
+      "id": "EMP012",
+      "name": "Sophia Allen",
+      "department": "Sales",
+      "role": "Sales Director",
+      "email": "sophia.allen@example.com",
+      "phone": "(312) 555-0112",
+      "location": "Dallas, TX",
+      "manager": "Executive Team",
+      "hireDate": "2015-08-31",
+      "status": "Active"
+    }
+  ]
+}

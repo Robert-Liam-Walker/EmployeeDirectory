@@ -7,14 +7,22 @@ sap.ui.define([
 
     return Controller.extend("project1.controller.View2", {
         onInit: function () {
+            this.getView().setModel(this.getOwnerComponent().getModel("employees"), "employees");
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.getRoute("employeeDetail").attachPatternMatched(this._onObjectMatched, this);
         },
 
         _onObjectMatched: function (oEvent) {
             var sEmployeeId = oEvent.getParameter("arguments").employeeId;
+            var iEmployeeIndex = this._getEmployeeIndex(sEmployeeId);
+
+            if (iEmployeeIndex < 0) {
+                UIComponent.getRouterFor(this).navTo("RouteView1", {}, true);
+                return;
+            }
+
             this.getView().bindElement({
-                path: "/EmployeeCollection/" + (this._getEmployeeIndex(sEmployeeId)),
+                path: "/EmployeeCollection/" + iEmployeeIndex,
                 model: "employees"
             });
         },
@@ -36,7 +44,7 @@ sap.ui.define([
                 window.history.go(-1);
             } else {
                 var oRouter = UIComponent.getRouterFor(this);
-                oRouter.navTo("view1", {}, true);
+                oRouter.navTo("RouteView1", {}, true);
             }
         }
     });

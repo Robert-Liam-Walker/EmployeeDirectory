@@ -1,19 +1,51 @@
 <mvc:View controllerName="project1.controller.View2"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
     displayBlock="true">
     <Page id="detailPage" title="Employee Details" showNavButton="true" navButtonPress="onNavBack">
         <content>
-            <ObjectHeader
-                id="objectHeader"
-                title="{employees>name}"
-                number="{employees>id}"
-                numberUnit="{employees>department}">
-                <attributes>
-                    <ObjectAttribute id="roleAttributeDetail" title="Role" text="{employees>role}" />
-                    <ObjectAttribute id="emailAttributeDetail" title="Email" text="{employees>email}" />
-                </attributes>
-            </ObjectHeader>
+            <VBox class="sapUiResponsiveMargin employeeDetailShell" renderType="Bare">
+                <ObjectHeader
+                    id="objectHeader"
+                    title="{employees>name}"
+                    number="{employees>id}"
+                    numberUnit="{employees>department}">
+                    <attributes>
+                        <ObjectAttribute id="roleAttributeDetail" title="Role" text="{employees>role}" />
+                        <ObjectAttribute id="emailAttributeDetail" title="Email" text="{employees>email}" />
+                        <ObjectAttribute id="managerAttributeDetail" title="Manager" text="{employees>manager}" />
+                    </attributes>
+                    <statuses>
+                        <ObjectStatus text="{employees>status}" state="{= ${employees>status} === 'Active' ? 'Success' : 'Warning' }" />
+                    </statuses>
+                </ObjectHeader>
+
+                <form:SimpleForm
+                    id="employeeDetailsForm"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="4"
+                    columnsXL="2"
+                    columnsL="2"
+                    columnsM="1"
+                    class="sapUiMediumMarginTop">
+                    <Label text="Email" />
+                    <Link text="{employees>email}" href="{= 'mailto:' + ${employees>email} }" />
+                    <Label text="Phone" />
+                    <Text text="{employees>phone}" />
+                    <Label text="Department" />
+                    <Text text="{employees>department}" />
+                    <Label text="Location" />
+                    <Text text="{employees>location}" />
+                    <Label text="Manager" />
+                    <Text text="{employees>manager}" />
+                    <Label text="Hire Date" />
+                    <Text text="{employees>hireDate}" />
+                </form:SimpleForm>
+            </VBox>
         </content>
     </Page>
 </mvc:View>

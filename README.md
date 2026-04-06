@@ -1,69 +1,59 @@
 # Employee Directory
 
-The **Employee Directory** app is a web-based application designed to help organizations manage and view employee information efficiently. With this application, users can easily search for employees, view their details, and filter employees by department.
-Open your browser and go to `http://localhost:3000` or the URL provided by your development server.
+Employee Directory is a small SAPUI5 application for browsing a company employee roster, filtering by department, and opening a dedicated detail view for each employee.
 
-## Images
-![Main](https://i.imgur.com/mpBQMDb.png)
+## Current Features
 
-## Contributing
-
-We welcome contributions to improve the application. Please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with clear messages.
-4. Push your changes to your forked repository.
-5. Create a pull request describing your changes.
-
-## Features
-
-- **Search Functionality:** Quickly find employees by name or ID.
-- **Department Filter:** View employees based on their department.
-- **Employee Details:** Access detailed information about each employee.
+- Search employees by name, ID, role, or email
+- Filter the directory by department
+- Browse a sorted employee list with status, location, and manager info
+- Open a routed employee detail page with contact and employment metadata
+- Responsive UI built with SAPUI5/Fiori tooling
 
 ## Getting Started
 
-To get started with the Employee Directory app, follow these steps:
-
-1. **Clone the Repository**
+1. Clone the repository
 
 ```bash
-git clone git@github.com:Robert-Liam-Walker/EmployeeDirectory.git
-```
-
-2. **Navigate to the Project Directory**
-
-```bash
+git clone https://github.com/Robert-Liam-Walker/EmployeeDirectory.git
 cd EmployeeDirectory
 ```
 
-3. **Install Dependencies**
+2. Install dependencies
 
 ```bash
 npm install
 ```
-4. **Run the Application**
+
+3. Run the app
 
 ```bash
 npm start
 ```
-5. **Access the Application** <br />
-Open your browser and go to `http://localhost:3000` or the URL provided by your development server.
 
-## Contributing
+4. Open the sandbox URL shown by the UI5 dev server, or use the no-FLP mode:
 
-We welcome contributions to improve the application. Please follow these guidelines:
+```bash
+npm run start-noflp
+```
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes with clear messages.
-4. Push your changes to your forked repository.
-5. Create a pull request describing your changes.
+## Available Scripts
+
+- `npm start`: Launch the app in the Fiori Launchpad sandbox
+- `npm run start-local`: Launch using `ui5-local.yaml`
+- `npm run start-noflp`: Launch the app directly without FLP sandbox
+- `npm run build`: Build the production bundle into `dist/`
+- `npm run unit-tests`: Open QUnit unit tests
+- `npm run int-tests`: Open OPA integration tests
+
+## Project Notes
+
+- Employee data currently comes from `webapp/model/employees.json`
+- The app uses component-level JSON models so both the list page and detail page share the same source of truth
 
 ## Contact
 
-For any questions or feedback, please contact [Liam Walker](mailto:liam.walker@example.com).
+For questions or feedback, contact [Liam Walker](mailto:liam.walker@example.com).
 
 ## Application Details
 |               |
@@ -99,5 +89,3 @@ An SAP Fiori application.
 #### Pre-requisites:
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
-
-
