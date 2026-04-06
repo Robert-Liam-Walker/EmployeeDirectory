@@ -2,15 +2,25 @@
 
 sap.ui.define([
 	"project1/controller/View1.controller"
-], function (Controller) {
+], function (View1Controller) {
 	"use strict";
 
 	QUnit.module("View1 Controller");
 
-	QUnit.test("I should test the View1 controller", function (assert) {
-		var oAppController = new Controller();
-		oAppController.onInit();
-		assert.ok(oAppController);
-	});
+	QUnit.test("_buildDepartmentOptions creates a sorted unique department list", function (assert) {
+		var oController = new View1Controller();
+		var aOptions = oController._buildDepartmentOptions([
+			{ department: "IT" },
+			{ department: "Finance" },
+			{ department: "IT" },
+			{ department: "HR" }
+		]);
 
+		assert.strictEqual(aOptions[0].key, "", "Includes the default option first");
+		assert.deepEqual(aOptions.slice(1), [
+			{ key: "Finance", text: "Finance" },
+			{ key: "HR", text: "HR" },
+			{ key: "IT", text: "IT" }
+		], "Returns unique department options in ascending order");
+	});
 });
